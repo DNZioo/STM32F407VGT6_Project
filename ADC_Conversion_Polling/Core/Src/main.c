@@ -61,8 +61,6 @@ static void MX_ADC1_Init(void);
 #define V25 0.76
 uint16_t ADC_VAL[3];
 float Temp=0.0;
-//uint16_t var=0;
-//float val=0.0;
 /* USER CODE END 0 */
 
 /**
@@ -95,9 +93,6 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
-//  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

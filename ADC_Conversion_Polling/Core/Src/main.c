@@ -101,20 +101,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//	uint16_t AD_RES = 0;
-//  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-//  HAL_ADCEx_InjectedConvCpltCallback(&hadc1);
-
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//    HAL_ADC_Start(&hadc1);
-//	HAL_ADC_PollForConversion(&hadc1, 10);
-//	AD_RES = HAL_ADC_GetValue(&hadc1);
-//	TIM2->CCR1 = (AD_RES<<4);
-//	HAL_Delay(1);
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 1000);
 	adc = HAL_ADC_GetValue(&hadc1);

@@ -47,11 +47,6 @@ TIM_HandleTypeDef htim1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-///*Ultrasonic Sensor*/
-//uint32_t pMillis;
-//uint32_t Value1 = 0;
-//uint32_t Value2 = 0;
-//uint16_t Distance = 0;
 float Temperature, Pressure, Humidity;
 /* USER CODE END PV */
 
@@ -67,7 +62,6 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 int _write(int file, char* p, int len)
 {
 	HAL_UART_Transmit(&huart2, p, len, 10);
@@ -108,15 +102,6 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
-//  // Optionally set brightness. 0 is off. By default, initialized to full brightness.
-//  tm1637SetBrightness(1);
-
-//  /*Utrasonic sensor*/
-//  HAL_TIM_Base_Start(&htim1);
-//  HAL_GPIO_WritePin(TRIG_PIN_GPIO_Port, TRIG_PIN_Pin, 0); //Pull the TRIG pin low
-
-  /*************BME280****************/
   BME280_Config(OSRS_2, OSRS_16, OSRS_1, MODE_NORMAL, T_SB_0p5, IIR_16);
   /* USER CODE END 2 */
 
@@ -125,35 +110,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
-//	  /*TM1637 Display*/
-//	  for (int i = 0;  i < 10000; ++ i) {
-//		  tm1637DisplayDecimal(i, 1);
-//		  HAL_Delay(500);
-//	}
-
-
-//	/**************Ultrasonic Sensor********************/
-//	HAL_GPIO_WritePin(TRIG_PIN_GPIO_Port, TRIG_PIN_Pin, GPIO_PIN_SET);  // pull the TRIG pin HIGH
-//	__HAL_TIM_SET_COUNTER(&htim1, 0);
-//	while (__HAL_TIM_GET_COUNTER (&htim1) < 10);  // wait for 10 us
-//	HAL_GPIO_WritePin(TRIG_PIN_GPIO_Port, TRIG_PIN_Pin, GPIO_PIN_RESET);  // pull the TRIG pin low
-//
-//	pMillis = HAL_GetTick(); // used this to avoid infinite while loop  (for timeout)
-//	// wait for the echo pin to go high
-//	while (!(HAL_GPIO_ReadPin (ECHO_PIN_GPIO_Port, ECHO_PIN_Pin)) && pMillis + 10 >  HAL_GetTick());
-//	Value1 = __HAL_TIM_GET_COUNTER (&htim1);
-//
-//	pMillis = HAL_GetTick(); // used this to avoid infinite while loop (for timeout)
-//	// wait for the echo pin to go low
-//	while ((HAL_GPIO_ReadPin (ECHO_PIN_GPIO_Port, ECHO_PIN_Pin)) && pMillis + 50 > HAL_GetTick());
-//	Value2 = __HAL_TIM_GET_COUNTER (&htim1);
-//
-//	Distance = (Value2-Value1)* 0.034/2;
-//	HAL_Delay(50);
-
-	  /***************BME280*************/
 	  BME280_Measure();
 	  printf("The Temperature is: %.2f c \r\n", Temperature);
 	  printf("The Humidity is: %.2f      \r\n", Humidity);

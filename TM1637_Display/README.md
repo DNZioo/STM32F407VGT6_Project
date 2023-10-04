@@ -1,4 +1,4 @@
-💠Let's start STM32F407VGT6 with TM1637 :<br>
+# Let's start STM32F407VGT6 with TM1637 :<br>
 - `PC7 : DIO`
 - `PC6 : CLK`<br>
 - Need to Cofigure as figure below:

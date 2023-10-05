@@ -4,5 +4,5 @@
 - Configure operating mode in Ecoder.<br>
 ![encoder2](https://github.com/DNZioo/STM32F407VGT6_Project/assets/132254089/6ea32012-d8f6-481c-8a42-a24b7163f7e7)
 <p align="center">
-  <img width="460" height="300" src="https://6ea32012-d8f6-481c-8a42-a24b7163f7e7">
+  <img width="460" height="300" src="https://github.com/DNZioo/STM32F407VGT6_Project/assets/132254089/6ea32012-d8f6-481c-8a42-a24b7163f7e7">
 </p>

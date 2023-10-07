@@ -1,5 +1,5 @@
 # Potention meter displays on TM1637
-## Let's start build STM32F407VGT6 with Potention meter and TM1637
+## Let's start build STM32F407VGT6 with Potentionmeter and TM1637
   - Some basic to bild this project.<br>
   - In this case u need to enable ADC and select pinout for TM1637 as show below:
 

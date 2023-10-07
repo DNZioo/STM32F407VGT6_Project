@@ -1,4 +1,4 @@
-# Let's start STM32F407VGT6 with TM1637 :
+# Let's start STM32F407VGT6 with TM1637
 - `PC7 : DIO` is Output pin.
 - `PC6 : CLK` is Output pin.<br>
 - Need to Cofigure as figure below:

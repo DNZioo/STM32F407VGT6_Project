@@ -1,0 +1,48 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid b53b6b97-022a-46ec-b6a4-2a1b2d43b865)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 132.715 33.02) (size 88.265 45.72) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 78bbb5ec-adfe-4eda-a82c-f5ccaf13f139)
+    (property "Sheetname" "Power" (at 132.715 32.3084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "BUCK CONVERTER.kicad_sch" (at 132.715 79.3246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "BTS7960_Driver"
+        (path "/b53b6b97-022a-46ec-b6a4-2a1b2d43b865" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 22.86 33.655) (size 83.185 45.72) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid f3a6ace2-f96e-420a-8af3-751b40025839)
+    (property "Sheetname" "Driver_Motor" (at 22.86 32.9434 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Driver_Motor.kicad_sch" (at 22.86 79.9596 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "BTS7960_Driver"
+        (path "/b53b6b97-022a-46ec-b6a4-2a1b2d43b865" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
